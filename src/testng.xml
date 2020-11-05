@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<suite name = "Learn Test NG">
+   <test name = "module test Feature">
+  <!-- <parameter name="pm" value="this is value"/>  -->
+      <classes>
+         <exclude name = "com.test.paramertization" />
+         <exclude name = "com.test.dataproviderConcepts" />
+         <class name = "com.test.dataproviderinother" />
+      </classes>
+      
+   </test>
+</suite> 
