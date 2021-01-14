@@ -93,8 +93,6 @@ public class ReadExcel {
 				System.out.println(row.getCell(j));
 			}
 		}
-		
-		
 	
 	    	Row row = sheet.createRow(sheet.getLastRowNum()+1);
 	        for(int i = 0 ; i<row.getLastCellNum(); i++) {
@@ -104,7 +102,7 @@ public class ReadExcel {
 	        fis.close();
 	        FileOutputStream fos = new FileOutputStream("");
 	        workbook.write(fos);
-	        fos.close();	
+	        fos.close();
 	}
 
 }
