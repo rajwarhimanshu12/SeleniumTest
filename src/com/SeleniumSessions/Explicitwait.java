@@ -2,7 +2,9 @@ package com.SeleniumSessions;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Explicitwait {
@@ -14,16 +16,26 @@ public class Explicitwait {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		System.out.println(System.currentTimeMillis());
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		
 		
 		driver.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.14.0");
+		System.out.println(System.currentTimeMillis());
 		
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
+		WebElement Element = driver.findElement(By.linkText("Gradle"));
+		Element.click();
+		WebElement Element1 = driver.findElement(By.linkText("abcd"));
+		
+		System.out.println();
+		
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
 		
 		
 		// WebDriverWait wait = new WebDriverWait(WebDriverRefrence,TimeOut);
+		
+		driver.quit();
 		
 	}
 
